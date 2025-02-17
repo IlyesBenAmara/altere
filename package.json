@@ -1,0 +1,25 @@
+{
+  "name": "altere",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --loader=ts-node/esm --env-file=.env --watch src/index.ts",
+    "build": "npx tsc",
+    "start": "node --env-file=.env dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2",
+    "nedb": "^1.8.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/nedb": "^1.8.16",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}
