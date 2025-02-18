@@ -1,12 +1,12 @@
 {
   "name": "altere",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/app.js",
   "type": "module",
   "scripts": {
-    "dev": "node --loader=ts-node/esm --env-file=.env --watch src/index.ts",
+    "dev": "node --loader=ts-node/esm --env-file=.env --watch src/server.ts",
     "build": "npx tsc",
-    "start": "node --env-file=.env dist/index.js"
+    "start": "tsc && node --env-file=.env dist/server.js"
   },
   "keywords": [],
   "author": "",
@@ -14,11 +14,11 @@
   "description": "",
   "dependencies": {
     "express": "^4.21.2",
-    "nedb": "^1.8.0"
+    "mongoose": "^8.10.1"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
-    "@types/nedb": "^1.8.16",
+    "@types/node": "^22.7.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.3"
   }

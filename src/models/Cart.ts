@@ -1,7 +1,17 @@
-import { Product } from "./Product.js";
+import { model, Schema } from "mongoose";
+import { IProduct } from "./Product";
 
-export interface Cart {
+export interface ICart {
   id: string;
-  products: Product[];
+  products: IProduct[];
   totalPrice: number | null;
 }
+
+const cartSchema = new Schema<ICart>({
+  products: [{ type: Schema.Types.ObjectId, ref: "Product" }],
+  totalPrice: [{ type: Number }],
+});
+
+const Cart = model<ICart>("Cart", cartSchema);
+
+export default Cart;

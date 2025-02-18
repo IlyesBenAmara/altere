@@ -3,16 +3,9 @@
     "module": "commonjs",
     "esModuleInterop": true,
     "target": "es6",
-    "noImplicitAny": false,
     "moduleResolution": "node",
-    "resolveJsonModule": true,
     "sourceMap": true,
-    "allowJs": true,
-    "outDir": "dist",
-    "baseUrl": ".",
-    "paths": {
-      "*": ["node_modules/*"]
-    }
+    "outDir": "dist"
   },
-  "include": ["src/**/*"]
+  "lib": ["es2015"]
 }
